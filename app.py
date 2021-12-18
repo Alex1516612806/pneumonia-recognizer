@@ -2,12 +2,13 @@
 
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow import keras
 import tensorflow as tf
+from keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing import image
 import numpy as np
 import os
-from tensorflow import keras
-from keras.preprocessing import image
+
 
 try:
     import shutil
