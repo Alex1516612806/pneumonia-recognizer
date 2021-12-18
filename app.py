@@ -12,8 +12,6 @@ import os
 
 try:
     import shutil
-    # shutil.rmtree('uxploaded/image')
-    # % cd uploaded % mkdir image % cd ..
     print()
 except:
     pass
@@ -30,14 +28,6 @@ def upload_f():
 
 
 def finds(filename):
-    # test_datagen = ImageDataGenerator(
-    #     rotation_range=20,
-    #     width_shift_range=0.1,
-    #     shear_range=0.1,
-    #     zoom_range=0.1,
-    #     samplewise_center=True,
-    #     samplewise_std_normalization=True
-    # )
     vals = ['Normal', 'Pneumonia']
     img_path = 'uploaded/image/'+filename
     img = image.load_img(img_path, target_size=(180, 180))
@@ -64,5 +54,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
     app.run()
