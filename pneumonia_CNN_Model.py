@@ -127,22 +127,22 @@ model.summary()
 
 # model.summary()
 
-# model.fit(
-#     train,
-#     epochs=3,
-#     validation_data=validation,
-#     class_weight=class_weight,
-#     steps_per_epoch=100,
-#     validation_steps=25,
-#     # train,
-#     # epochs=10,
-#     # validation_data=validation,
-#     # class_weight=class_weight,
-#     # steps_per_epoch=len(train),
-#     # validation_steps=len(validation),
-# )
+model.fit(
+    train,
+    epochs=3,
+    validation_data=validation,
+    class_weight=class_weight,
+    steps_per_epoch=100,
+    validation_steps=25,
+    # train,
+    # epochs=10,
+    # validation_data=validation,
+    # class_weight=class_weight,
+    # steps_per_epoch=len(train),
+    # validation_steps=len(validation),
+)
 
-# evaluation=model.evaluate(test)
-# print(f"Test Accuracy: {evaluation[1] * 100:.2f}%")
+evaluation = model.evaluate(test)
+print(f"Test Accuracy: {evaluation[1] * 100:.2f}%")
 
-# model.save("pneumonia_CNN.h5")
+model.save("pneumonia_CNN.h5")
