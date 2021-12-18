@@ -2,10 +2,9 @@
 
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
-from tensorflow import keras
 import tensorflow as tf
 # from keras.preprocessing.image import ImageDataGenerator
-from keras.preprocessing import image
+# from keras.preprocessing import image
 import numpy as np
 import os
 
@@ -30,8 +29,9 @@ def upload_f():
 def finds(filename):
     vals = ['Normal', 'Pneumonia']
     img_path = 'uploaded/image/'+filename
-    img = image.load_img(img_path, target_size=(180, 180))
-    img_tensor = image.img_to_array(img)
+    img = tf.keras.preprocessing.image.load_img(
+        img_path, target_size=(180, 180))
+    img_tensor = tf.keras.preprocessing.image.img_to_array(img)
     img_tensor = np.expand_dims(img_tensor, axis=0)
     img_tensor /= 180.
 
