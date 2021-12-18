@@ -1,1 +1,7 @@
-This is a readme file
+# URL 
+https://pneumonia-recognizer.herokuapp.com/
+
+# Author:
+* Shicong Wang
+* Zixuan Wang
+* Jiayi Du
