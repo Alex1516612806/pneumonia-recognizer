@@ -1,7 +1,4 @@
-from keras.preprocessing import image
-from keras.layers import Dense, Conv2D, MaxPool2D, Dropout, Flatten, BatchNormalization
-from keras.models import Sequential
-from keras.preprocessing.image import ImageDataGenerator
+
 
 import os
 import numpy as np
@@ -9,7 +6,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import tensorflow as tf
-from tensorflow import keras
+from tf.keras.preprocessing import image
+from tf.keras.layers import Dense, Conv2D, MaxPool2D, Dropout, Flatten, BatchNormalization
+from tf.keras.models import Sequential
+from image import ImageDataGenerator
+
 
 # os.listdir("./data")
 
