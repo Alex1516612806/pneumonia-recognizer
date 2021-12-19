@@ -28,12 +28,12 @@ def upload_f():
 
 def finds(filename):
     vals = ['Normal', 'Pneumonia']
-    img_path = 'uploaded/image/'+filename
-    img = tf.keras.preprocessing.image.load_img(
-        img_path, target_size=(180, 180))
-    img_tensor = tf.keras.preprocessing.image.img_to_array(img)
-    img_tensor = np.expand_dims(img_tensor, axis=0)
-    img_tensor /= 180.
+    # img_path = 'uploaded/image/'+filename
+    # img = tf.keras.preprocessing.image.load_img(
+    #     img_path, target_size=(180, 180))
+    # img_tensor = tf.keras.preprocessing.image.img_to_array(img)
+    # img_tensor = np.expand_dims(img_tensor, axis=0)
+    # img_tensor /= 180.
 
     # pred = model.predict_generator(img_tensor)
     # classes_x = np.argmax(pred, axis=1)
