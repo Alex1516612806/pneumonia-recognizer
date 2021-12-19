@@ -15,7 +15,7 @@ try:
 except:
     pass
 
-model = tf.keras.models.load_model('pneumonia_CNN.h5')
+# model = tf.keras.models.load_model('pneumonia_CNN.h5')
 app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = 'uploaded/image'
@@ -35,11 +35,12 @@ def finds(filename):
     img_tensor = np.expand_dims(img_tensor, axis=0)
     img_tensor /= 180.
 
-    pred = model.predict_generator(img_tensor)
-    classes_x = np.argmax(pred, axis=1)
+    # pred = model.predict_generator(img_tensor)
+    # classes_x = np.argmax(pred, axis=1)
     # print([np.argmax(pred)])
     # return str(vals[np.argmax(pred)])
-    return vals[int(classes_x)]
+    # return vals[int(classes_x)]
+    return vals[0]
 
 
 @app.route('/uploader', methods=['GET', 'POST'])
